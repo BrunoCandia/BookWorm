@@ -16,7 +16,7 @@ public sealed class ListFeedbacksQueryTests
     {
         _repositoryMock = new();
         _handler = new(_repositoryMock.Object);
-        _bookId = Guid.NewGuid();
+        _bookId = Guid.CreateVersion7();
         _feedbacks = new FeedbackFaker().Generate();
     }
 

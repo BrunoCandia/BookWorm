@@ -17,7 +17,7 @@ public sealed class CreateBuyerCommandTests
 
     public CreateBuyerCommandTests()
     {
-        var userId = Guid.NewGuid();
+        var userId = Guid.CreateVersion7();
         _userName = "Test User";
 
         _buyerRepositoryMock = new();
@@ -43,7 +43,7 @@ public sealed class CreateBuyerCommandTests
     {
         // Arrange
         var command = new CreateBuyerCommand("123 Main St", "Seattle", "Washington");
-        var buyerId = Guid.NewGuid();
+        var buyerId = Guid.CreateVersion7();
         Buyer? buyerEntity = null;
 
         _buyerRepositoryMock
